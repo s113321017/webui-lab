@@ -1,11 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Open WebUI</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <main class="app">
+        <aside class="sidebar">
+            <button class="new-chat" id="newChat">＋ 新增對話</button>
+
+            <div class="conversation-list">
+                <button class="conversation">學習 Git 的方法</button>
+                <button class="conversation">WebUI 設計討論</button>
+            </div>
+
+            <div class="sidebar-footer">WebUI Lab</div>
+        </aside>
+
+        <section class="chat">
+            <header class="topbar">WebUI Assistant</header>
+
+            <div class="messages" id="messages">
+                <div class="welcome" id="welcome">
+                    <h1>今天想聊什麼？</h1>
+                    <p>這是一個簡單的聊天介面，可以從 HTML 和 CSS 開始學習。</p>
+                </div>
+
+                <div class="message assistant">
+                    <div class="avatar">AI</div>
+                    <p>你好！我是你的 WebUI 助手，有什麼問題都可以問我。</p>
+                </div>
+            </div>
+
+            <div class="composer-area">
+                <form class="composer" id="chatForm">
+                    <input id="messageInput" type="text" placeholder="傳送訊息..." autocomplete="off">
+                    <button type="submit">送出</button>
+                </form>
+                <p class="hint">WebUI Assistant 可能會產生錯誤資訊，請自行確認重要內容。</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const form = document.querySelector("#chatForm");
+        const input = document.querySelector("#messageInput");
+        const messages = document.querySelector("#messages");
+        const welcome = document.querySelector("#welcome");
+        const newChat = document.querySelector("#newChat");
+
+        function escapeHtml(text) {
+            return text.replace(/[&<>"']/g, function (character) {
+                const entities = {
+                    "&": "&amp;",
+                    "<": "&lt;",
+                    ">": "&gt;",
+                    '"': "&quot;",
+                    "'": "&#039;"
+                };
+                return entities[character];
+            });
+        }
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const text = input.value.trim();
+            if (!text) return;
+
+            welcome.style.display = "none";
+            const safeText = escapeHtml(text);
+            messages.insertAdjacentHTML("beforeend", `
+                <div class="message user">
+                    <div class="avatar">你</div>
+                    <p>${safeText}</p>
+                </div>
+                <div class="message assistant">
+                    <div class="avatar">AI</div>
+                    <p>我收到你的訊息了。這裡可以接上真正的 API。</p>
+                </div>
+            `);
+
+            input.value = "";
+            messages.scrollTop = messages.scrollHeight;
+        });
+
+        newChat.addEventListener("click", function () {
+            messages.innerHTML = `
+                <div class="welcome" id="welcome">
+                    <h1>今天想聊什麼？</h1>
+                    <p>這是一個簡單的聊天介面，可以從 HTML 和 CSS 開始學習。</p>
+                </div>
+            `;
+            input.focus();
+        });
+    </script>
 </body>
 </html>
