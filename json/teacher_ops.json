@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": "dashboard",
+      "label": "教務總覽",
+      "icon": "總",
+      "description": "查看教務指標、近期課務與最新公告。"
+    },
+    {
+      "id": "timetable",
+      "label": "課務排程",
+      "icon": "課",
+      "description": "管理課程開設、授課安排與教室時段。"
+    },
+    {
+      "id": "courses",
+      "label": "課程管理",
+      "icon": "程",
+      "description": "查詢課程資料、修課名單與課程異動。"
+    },
+    {
+      "id": "teachers",
+      "label": "教師資料",
+      "icon": "師",
+      "description": "維護教師基本資料、授課資訊與聯絡方式。"
+    },
+    {
+      "id": "students",
+      "label": "學生修課",
+      "icon": "生",
+      "description": "查詢學生修課狀態、選課紀錄與學習進度。"
+    },
+    {
+      "id": "announcements",
+      "label": "公告管理",
+      "icon": "告",
+      "description": "發布教務公告並追蹤公告期間與分類。"
+    },
+    {
+      "id": "reports",
+      "label": "報表中心",
+      "icon": "表",
+      "description": "彙整教務統計並匯出常用管理報表。"
+    }
+  ]
+}

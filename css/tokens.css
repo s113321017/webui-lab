@@ -1,0 +1,56 @@
+:root {
+    color-scheme: light;
+    --ink: #183a35;
+    --ink-soft: #31514c;
+    --muted: #72817d;
+    --line: #e2e9e5;
+    --canvas: #f4f7f4;
+    --paper: #ffffff;
+    --brand: #1b5148;
+    --brand-hover: #133e37;
+    --mint: #e3f0e9;
+    --amber: #c17b32;
+    --rose: #a7524b;
+    --blue: #47798a;
+    --sidebar-width: 256px;
+    --content-width: 1280px;
+    --radius: 8px;
+    font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--ink);
+    background: var(--canvas);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+button {
+    color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #8fbfa9;
+    outline-offset: 3px;
+}
+
+[hidden] {
+    display: none !important;
+}

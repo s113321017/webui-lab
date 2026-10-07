@@ -1,0 +1,45 @@
+@media (max-width: 759px) {
+    .sidebar.is-open ~ .workspace .topbar {
+        pointer-events: none;
+    }
+}
+
+@media (min-width: 520px) {
+    .main-content {
+        padding-right: 22px;
+        padding-left: 22px;
+    }
+
+    .page-heading {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .today-label {
+        display: inline;
+    }
+}
+
+@media (min-width: 760px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .sidebar-backdrop {
+        display: none !important;
+    }
+
+    .today-label {
+        font-size: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

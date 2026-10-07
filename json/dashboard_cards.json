@@ -1,0 +1,88 @@
+{
+  "term": "114 學年度第 1 學期",
+  "metrics": [
+    {
+      "label": "開設課程",
+      "value": "128",
+      "unit": "門",
+      "icon": "課",
+      "accent": "#1b7162",
+      "tint": "#e3f0e9",
+      "change": "+8",
+      "note": "較上學期增加"
+    },
+    {
+      "label": "授課教師",
+      "value": "46",
+      "unit": "位",
+      "icon": "師",
+      "accent": "#47798a",
+      "tint": "#e8f0f2",
+      "change": "+3",
+      "note": "本學期新增"
+    },
+    {
+      "label": "修課人次",
+      "value": "2,384",
+      "unit": "人次",
+      "icon": "生",
+      "accent": "#a56b31",
+      "tint": "#f5eee4",
+      "change": "+5.2%",
+      "note": "較上學期成長"
+    },
+    {
+      "label": "待處理申請",
+      "value": "12",
+      "unit": "件",
+      "icon": "待",
+      "accent": "#a7524b",
+      "tint": "#f5eae8",
+      "change": "4 件",
+      "note": "即將截止"
+    }
+  ],
+  "schedule": [
+    {
+      "weekday": "週一",
+      "day": "06",
+      "title": "課程異動審查",
+      "detail": "教務會議室・教務處",
+      "time": "09:30"
+    },
+    {
+      "weekday": "週二",
+      "day": "07",
+      "title": "新生選課說明會",
+      "detail": "管理學院演講廳・註冊組",
+      "time": "14:00"
+    },
+    {
+      "weekday": "週四",
+      "day": "09",
+      "title": "期中考試週程確認",
+      "detail": "行政大樓 203 會議室・課務組",
+      "time": "10:00"
+    }
+  ],
+  "notices": [
+    {
+      "title": "114-1 學期加退選作業時程公告",
+      "category": "選課資訊",
+      "date": "2025.09.26",
+      "accent": "#c17b32"
+    },
+    {
+      "title": "教師授課大綱填報提醒",
+      "category": "教師服務",
+      "date": "2025.09.24",
+      "accent": "#47798a"
+    },
+    {
+      "title": "教室設備維護與借用須知",
+      "category": "校務公告",
+      "date": "2025.09.22",
+      "accent": "#1b7162"
+    }
+  ]
+}
